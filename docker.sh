@@ -57,4 +57,5 @@ case "$1" in
 
     *)
     docker ps
+    ;;
 esac
