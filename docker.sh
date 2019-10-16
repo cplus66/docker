@@ -55,7 +55,12 @@ case "$1" in
     sudo apt-get install docker-ce
     ;;
 
+    clean)
+    docker system prune
+    ;;
+
     *)
     docker ps
     ;;
+
 esac
