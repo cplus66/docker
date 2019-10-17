@@ -59,6 +59,16 @@ case "$1" in
     docker system prune
     ;;
 
+    pull)
+    docker pull centos:latest
+    docker pull centos:centos8
+    docker pull centos:centos7
+    docker pull ubuntu:latest
+    docker pull ubuntu:18.04
+    docker pull ubuntu:16.04
+    docker pull ubuntu:14.04
+    ;;
+
     *)
     docker ps
     ;;
