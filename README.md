@@ -1,5 +1,8 @@
 # docker
-Create useful commands for using docker easier.
+Collect useful docker commands.
+
+## Usage
+./docker.sh { create | exec | start | stop | status | install | clean | pull }
 
 ## SSH Server
 
@@ -15,4 +18,4 @@ docker port sshd-1 22
 ```
 
 ## Reference
-- https://docs.docker.com/engine/examples/running\_ssh\_service/
+- https://docs.docker.com/engine/examples/running_ssh_service/
