@@ -1,6 +1,6 @@
 #!/bin/bash -x
 # Date: Oct 09, 2019
-# Author: cplus.shen@advantech.com.tw
+# Author: cplus.shen
 # Description: Docker utilities
 # Usage: ./docker { create | exec | start | stop | rm } CONTAIN_NAME
 #        ./docker status
