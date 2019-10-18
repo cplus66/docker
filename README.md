@@ -18,8 +18,10 @@ docker port sshd-1 22
 ```
 
 ## Useful Commands
+### Launch a Container
 ```
-docker run -d -p 30081:80 --name=sandbox1 -h sandbox1 qoriq/arm64-ubuntu bash -c "lighttpd -f /etc/lighttpd/lighttpd.conf -D"
+docker run -d -p 30081:80 --name=sandbox1 -h sandbox1 qoriq/arm64-ubuntu \
+    bash -c "lighttpd -f /etc/lighttpd/lighttpd.conf -D"
 ```
 - run - create and start the container. Optionally, download the image if not available on the host.
 - -d - start the container as a daemon.
@@ -28,6 +30,18 @@ docker run -d -p 30081:80 --name=sandbox1 -h sandbox1 qoriq/arm64-ubuntu bash -c
 - -h sandbox1 - the hostname inside the container.
 - bash -c "lighttpd -f /etc/lighttpd/lighttpd.conf -D" - the command to execute as PID 1 in the container.
 
+### Backup a Container
+```
+docker commit -p [container-id] backup01
+docker save -o backup01.tar backup01
+```
+
+### Restore a Container
+```
+docker load -i /tmp/backup01.tar
+```
+
 
 ## Reference
 - https://docs.docker.com/engine/examples/running_ssh_service/
+- https://www.thegeekdiary.com/how-to-backup-and-restore-docker-containers/
