@@ -45,3 +45,4 @@ docker load -i /tmp/backup01.tar
 ## Reference
 - https://docs.docker.com/engine/examples/running_ssh_service/
 - https://www.thegeekdiary.com/how-to-backup-and-restore-docker-containers/
+- https://leadwithoutatitle.wordpress.com/2018/03/07/how-to-create-an-ssh-enabled-docker-container-using-kubernetes/
