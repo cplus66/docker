@@ -51,6 +51,7 @@ Image name: \<Docker Hub ID\>/\<Repository Name\>:\<tag\>
 
 #### Push Docker Image
 ```
+docker login
 docker image push gordon/bulletinboard:1.0
 ```
 
