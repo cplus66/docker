@@ -47,7 +47,7 @@ docker load -i /tmp/backup01.tar
 ```
 docker image tag bulletinboard:1.0 gordon/bulletinboard:1.0
 ```
-Image name: <Docker Hub ID>/<Repository Name>:<tag>
+Image name: \<Docker Hub ID\>/\<Repository Name\>:\<tag\>
 
 #### Push Docker Image
 ```
