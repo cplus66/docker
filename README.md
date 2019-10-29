@@ -77,8 +77,8 @@ docker image push gordon/bulletinboard:1.0
 ### Admin Guide
 - https://docs.docker.com/engine/swarm/admin_guide/
 
-## Useful Commands
-### Launch a Container
+## Others
+### NXP QorIQ SDK
 ```
 docker run -d -p 30081:80 --name=sandbox1 -h sandbox1 qoriq/arm64-ubuntu \
     bash -c "lighttpd -f /etc/lighttpd/lighttpd.conf -D"
