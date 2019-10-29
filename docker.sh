@@ -35,6 +35,10 @@ case "$1" in
     docker exec -ti $2 /bin/bash
     ;;
 
+    attach)
+    docker attach $2 # name
+    ;;
+
     start)
     docker start $2
     ;;
