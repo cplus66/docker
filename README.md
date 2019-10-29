@@ -13,7 +13,7 @@ docker build -t openssh-server .
 
 ### Run Container
 ```
-docker run -d -P --name sshd-1 openssh-server
+docker run -d -P --name prj-id-1 openssh-server
 docker port sshd-1 22
 ```
 ### Backup a Container
@@ -42,7 +42,8 @@ docker swarm join --token <your_token> <your_ip_address>:2377
 
 ### Run Docker Service
 ```
-docker service create --name prj-id-1 --publish target=22,published=91131 --replicas=1 --network rd-net openssh-server:0.1
+docker service create --name prj-id-1 --publish target=22,published=91131 --replicas=1 \
+--network rd-net openssh-server:0.1
 ```
 
 ## Docker Hub
