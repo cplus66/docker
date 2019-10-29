@@ -41,6 +41,18 @@ docker save -o backup01.tar backup01
 docker load -i /tmp/backup01.tar
 ```
 
+### Docker Hub
+
+#### Tag Docker Image
+```
+docker image tag bulletinboard:1.0 gordon/bulletinboard:1.0
+```
+Image name: <Docker Hub ID>/<Repository Name>:<tag>
+
+#### Push Docker Image
+```
+docker image push gordon/bulletinboard:1.0
+```
 
 ## Reference
 - https://docs.docker.com/engine/examples/running_ssh_service/
