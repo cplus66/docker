@@ -1,9 +1,11 @@
-#!/bin/bash -x
+#!/bin/bash
 # Date: Oct 09, 2019
 # Author: cplus.shen
 # Description: Docker utilities
 # Usage: ./docker { create | exec | start | stop | rm } CONTAIN_NAME
 #        ./docker status
+#        ./docker clean
+#        ./docker pull
 #        ./docker install
 # OS:
 #     ubuntu:latest 18.04 bionic
@@ -14,6 +16,11 @@
 #                   stretch 9 9.11
 #                   jessie  8 8.11
 #            
+# Naming:
+#     IMAGE:   name:version
+#     NAMES:   project name
+#     Example, IMAGE: ubuntu:latest, NAME: project-name-container-number
+#
 
 if [ x$OS == "x" ]; then
     OS=ubuntu
@@ -36,14 +43,14 @@ case "$1" in
     docker stop $2
     ;;
 
-    status)
-    docker ps
-    ;;
-
     rm)
     echo "remove container $2"
     read
     docker rm $2
+    ;;
+
+    status)
+    docker ps
     ;;
 
     install)
@@ -70,7 +77,11 @@ case "$1" in
     ;;
 
     *)
-    docker ps
+    echo -e "Usage: $0 { create | exec | start | stop | rm } CONTAIN_NAME\n\
+       $0 status\n\
+       $0 install\n\
+       $0 clean\n\
+       $0 pull"
     ;;
 
 esac
