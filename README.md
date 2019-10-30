@@ -37,6 +37,11 @@ docker swarm init
 docker network create -d overlay rd-net
 ```
 
+Show join-token command for both worker and manager
+```
+docker swarm join-token manager
+```
+
 ### Worker
 ```
 docker swarm join --token <your_token> <your_ip_address>:2377
