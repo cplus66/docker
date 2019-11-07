@@ -1,3 +1,4 @@
+# Origin: https://docs.docker.com/engine/examples/running_ssh_service/
 FROM ubuntu:18.04
 
 RUN apt-get update && apt-get install -y openssh-server
