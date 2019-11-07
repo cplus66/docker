@@ -6,7 +6,7 @@ RUN apt-get install -y net-tools
 RUN apt-get install -y vim
 
 RUN mkdir /var/run/sshd
-RUN echo 'root:qwerty' | chpasswd
+RUN echo 'root:root' | chpasswd
 RUN sed -i 's/.*PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 # SSH login fix. Otherwise user is kicked off after login
