@@ -31,6 +31,10 @@ case "$1" in
     docker run --name $2 -d -t ${OS}:latest /bin/bash
     ;;
 
+    ssh)
+    docker run -d -P --name $2 cplus/openssh-server:0.1
+    ;;
+
     exec)
     docker exec -ti $2 /bin/bash
     ;;
@@ -60,7 +64,7 @@ case "$1" in
     install)
     sudo apt-get update
     sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
     sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
     sudo apt-get update
     sudo apt-get install -y docker-ce
