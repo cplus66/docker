@@ -9,6 +9,7 @@ RUN apt-get install -y openjdk-8-jdk
 RUN apt-get install -y python
 RUN apt-get install -y git
 RUN apt-get install -y sudo
+RUN apt-get install -y libelf-dev
 RUN apt-get install -y locales
 RUN locale-gen en_US.UTF-8
 
