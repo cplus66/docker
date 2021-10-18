@@ -98,3 +98,17 @@ docker run -d -p 30081:80 --name=sandbox1 -h sandbox1 qoriq/arm64-ubuntu \
 - --name=sandbox1 - the name of the container (as visible to Docker).
 - -h sandbox1 - the hostname inside the container.
 - bash -c "lighttpd -f /etc/lighttpd/lighttpd.conf -D" - the command to execute as PID 1 in the container.
+
+## Build Yocto 3.3.3 from Yocto 3.1.11 Docker Environment
+```
+mkdir build
+chown 30000:30000 build
+docker run -it --rm -u 30000 -v /home/root/build:/project gmacario/build-yocto
+
+build@56c26aea6341:~$ cd /project/
+build@56c26aea6341:/project$ curl -O http://downloads.yoctoproject.org/releases/yocto/yocto-3.3.3/poky-hardknott-25.0.3.tar.bz2
+build@56c26aea6341:/project$ tar xjf poky-hardknott-25.0.3.tar.bz2
+build@56c26aea6341:/project$ cd poky-hardknott-25.0.3
+build@56c26aea6341:/project/poky-hardknott-25.0.3$ source ./oe-init-build-env
+build@56c26aea6341:/project/poky-hardknott-25.0.3/build$ bitbake core-image-minimal
+```
