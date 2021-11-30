@@ -59,7 +59,7 @@ docker service create --name prj-id-1 --publish target=22,published=10120 --repl
 ```
 docker image tag bulletinboard:1.0 gordon/bulletinboard:1.0
 ```
-Image name: \<Docker Hub ID\>/\<Repository Name\>:\<tag\>
+Image name: \<Docker Hub ID\>/\<Image Name\>:\<tag\>
 
 ### Push Docker Image
 ```
